@@ -7,8 +7,14 @@ class Bike
     return true
   end
 
-  def docked?
-    return true
-  end
+  def report_broken
+
+  end  
+
+  # def docked?
+  #   return true
+  # end
+
+
 
 end
