@@ -4,6 +4,14 @@ describe DockingStation do
 
   it { is_expected.to respond_to(:release_bike) }
 
+  describe '#initialize'
+
+    it 'accepts a different capacity when specified by an administrator' do
+      bike = Bike.new
+      subject = DockingStation.new(30)
+      expect {30.times {subject.dock_bike(bike)}}.not_to raise_error
+    end
+
   # it 'has a default capacity' do
   #   expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
   # end
